@@ -2,13 +2,11 @@ version: "3"
 name: grafana_stack
 services:
   grafana:
-    container_name: grafana
     image: grafana/grafana-enterprise
     ports:
       - "3000:3000"
     restart: unless-stopped
   portainer:
-    container_name: portainer
     image: portainer/portainer-ce:latest
     ports:
       - "9000:9000"
